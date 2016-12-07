@@ -8,6 +8,7 @@
     <script src="Scripts/jquery-3.1.1.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet" />
     <script src="Scripts/bootstrap.js"></script>
+    <link href="css/StyleSheet.css" rel="stylesheet" />
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -18,15 +19,20 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">WEBSITE NAME</a>
+                    <a class="navbar-brand" href="#">Archaeotech</a>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Page 1</a> </li>
-                    <li><a href="#">Page 2</a> </li>
-                    <li><a href="#">Page 3</a> </li>
-                    <li><a href="Loginpage.aspx">log in</a></li>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                
+                <ul  class="nav navbar-nav" id="masterNav">
+                    <li class="active"><a href="homepage.aspx">Home</a></li>
+                    <li><a href="Loginpage.aspx">Log In</a></li>
                     <li><a href="Registerpage.aspx">Register</a></li>
+                    <li><a href="memberspage.aspx">Members</a></li>
+                    <li><a href="NonMember.aspx">Non-Members</a></li>
+                    <li><a href="Contact.aspx">Contact Us</a></li>
+                    <li><a href="AboutUs.aspx">About Us</a></li>
+                    <li><a href="PrDeal.aspx">Premium Deals</a></li>
+                    <li><a href="SubmitDeal.aspx">Submit a Deal"</a></li>
                 </ul>
                 
                 
@@ -38,8 +44,15 @@
             <div class="jumbotron">
                 <h1>MASTER PAGE EXAMPLE SITE</h1>
                 <p>texts here</p>
+                
             </div>
         </div>
+        
+        <asp:Menu ID="Menu1" runat="server"  DataSourceID="SiteMapDataSource1" Orientation="Vertical">
+                </asp:Menu>
+        
+        <br/>
+        <br/>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
