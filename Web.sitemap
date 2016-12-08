@@ -5,7 +5,7 @@
           <siteMapNode url="Registerpage.aspx" title="Register"  description="" />
         </siteMapNode>
         <siteMapNode url="membersLanding.aspx" title="Members"  description="" />
-        <siteMapNode url="NonMember.aspx" title="Non-Members"  description="" />
+        <siteMapNode url="Products.aspx" title="Browse Items"  description="" />
         <siteMapNode url="Contact.aspx" title="Contact Us"  description="" />
         <siteMapNode url="AboutUs.aspx" title="About Us"  description="" />
         <siteMapNode url="PrDeal.aspx" title="Premium Deals"  description="" />

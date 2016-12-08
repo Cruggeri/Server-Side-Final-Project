@@ -6,9 +6,9 @@
 <head runat="server">
     <link href="Content/bootstrap.css" rel="stylesheet"/>
     <script src="Scripts/jquery-3.1.1.js"></script>
-    <link href="css/bootstrap.css" rel="stylesheet"/>
+   <%-- <link href="css/bootstrap.css" rel="stylesheet"/>--%>
     <script src="Scripts/bootstrap.js"></script>
-    <link href="css/StyleSheet.css" rel="stylesheet"/>
+    <%--<link href="css/StyleSheet.css" rel="stylesheet"/>--%>
 
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
@@ -29,22 +29,22 @@
                     <a href="Homepage.aspx">Home<span class="glyphicon glyphicon-home"></span> </a>
                 </li>
                 <li>
-                    <a href="Registerpage.aspx">About Us<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="AboutUs.aspx">About Us<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
                 <li>
-                    <a href="Registerpage.aspx">Contact Us<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="Contact.aspx">Contact Us<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
                 <li>
-                    <a href="Registerpage.aspx">Premium Deals<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="PrDeal.aspx">Premium Deals<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
                 <li>
-                    <a href="Registerpage.aspx">Members<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="Memberspage.aspx">Members<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
                 <li>
-                    <a href="Registerpage.aspx">Sign Up<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="SubmitDeal.aspx">Submit a Deal<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
                 <li>
-                    <a href="Registerpage.aspx">Sign Up<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="Products.aspx">Browse Items for Sale<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
             </ul>
 
