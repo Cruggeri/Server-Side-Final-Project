@@ -10,13 +10,24 @@
 
      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Users]"></asp:SqlDataSource>
     
-    <asp:Label ID="Label1" runat="server" Text="Username:"></asp:Label>
-    <asp:TextBox ID="Username" runat="server"></asp:TextBox>
-    <br />
-    <asp:Label ID="Label2" runat="server" Text="Password:"></asp:Label>
-    <asp:TextBox ID="Password" runat="server"></asp:TextBox>
-    <asp:Label ID="errorLabel" runat="server" Text="Label(hidden)" Visible="False"></asp:Label>
-    <br/>
-    <asp:Button ID="Button1" runat="server" Text="submit" OnClick="Button1_Click" />
+     <br/>
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-6 center-block">
+            <asp:Label runat="server" Text="Login Page" Font-Size="40px" Font-Bold="True"></asp:Label> <br/><br/>
+            <asp:Label ID="Label1" runat="server" Text="Username:"></asp:Label>
+            <asp:TextBox ID="Username" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Username" ErrorMessage="Please enter username" ForeColor="red"></asp:RequiredFieldValidator>
+            <br/>
+            <asp:Label ID="Label2" runat="server" Text="Password:"></asp:Label>
+            <asp:TextBox ID="Password" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Password" ErrorMessage="Please enter password" ForeColor="red"></asp:RequiredFieldValidator><br/>
+            <br/>
+            <asp:Label ID="errorLabel" runat="server" Text="Label" Visible="False" ForeColor="red"></asp:Label>
+            <br/>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Button ID="Button1" runat="server" Text="submit" OnClick="Button1_Click"/>
+        </div>
+    </div>
+        </div>
 </asp:Content>
 
