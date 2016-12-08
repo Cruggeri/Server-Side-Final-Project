@@ -27,7 +27,7 @@
                     <li class="active"><a href="homepage.aspx">Home</a></li>
                     <li><a href="Loginpage.aspx">Log In</a></li>
                     <li><a href="Registerpage.aspx">Register</a></li>
-                    <li><a href="memberspage.aspx">Members</a></li>
+                    <li><a href="membersLanding.aspx">Members</a></li>
                     <li><a href="NonMember.aspx">Non-Members</a></li>
                     <li><a href="Contact.aspx">Contact Us</a></li>
                     <li><a href="AboutUs.aspx">About Us</a></li>
