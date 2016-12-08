@@ -11,7 +11,7 @@ public partial class PrDeal : System.Web.UI.Page
     {
         if (Session["user"] == null)
         {
-            Response.Write("You must be logged in to view the Members area - Please sign in");
+            Response.Write("You must be signed in in to view our premium deals - Please sign in");
             Response.Write("<a href='Loginpage.aspx'> sign in</a>");
         }
         else
