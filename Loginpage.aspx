@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-   <br/>
+    <br/>
     <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
     </asp:GridView>
     <br/>
@@ -15,7 +15,7 @@
     <br />
     <asp:Label ID="Label2" runat="server" Text="Password:"></asp:Label>
     <asp:TextBox ID="Password" runat="server"></asp:TextBox>
-    <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="errorLabel" runat="server" Text="Label(hidden)" Visible="False"></asp:Label>
     <br/>
     <asp:Button ID="Button1" runat="server" Text="submit" OnClick="Button1_Click" />
 </asp:Content>

@@ -4,7 +4,7 @@
         <siteMapNode url="Loginpage.aspx" title="Login"  description="" >
           <siteMapNode url="Registerpage.aspx" title="Register"  description="" />
         </siteMapNode>
-        <siteMapNode url="memberspage.aspx" title="Members"  description="" />
+        <siteMapNode url="membersLanding.aspx" title="Members"  description="" />
         <siteMapNode url="NonMember.aspx" title="Non-Members"  description="" />
         <siteMapNode url="Contact.aspx" title="Contact Us"  description="" />
         <siteMapNode url="AboutUs.aspx" title="About Us"  description="" />

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Memberspage : System.Web.UI.Page
+public partial class membersLanding : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -16,9 +16,7 @@ public partial class Memberspage : System.Web.UI.Page
         }
         else
         {
-            Response.Write("<h3> Hello " + Session["user"].ToString() + " </h3>");
-            Response.Write("<br/><a href='logout.aspx'>Logout</a>");
-
+            Response.Redirect("Memberspage.aspx");
         }
     }
 }

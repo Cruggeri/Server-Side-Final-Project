@@ -56,6 +56,8 @@
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
+             
+        <asp:HyperLink ID="logoutLink" runat="server" NavigateUrl="logout.aspx" Visible="False" Enabled="False">Logout</asp:HyperLink>
     </div>
     </form>
 </body>

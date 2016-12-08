@@ -25,14 +25,20 @@ public partial class Loginpage : Page
             var password = "";
 
             while (reader.Read())
+            {
                 password = reader["pwd"].ToString().Trim();
-
+            }
             if (Password.Text == password)
+            {
+                Session["user"] = Username.Text;
                 Response.Redirect("Memberspage.aspx");
+            }
             else
-                Label3.Text = "Username and Password do not match";
+            {
+                errorLabel.Visible = true;
+                errorLabel.Text = "Username and Password do not match";
 
-
+            }
             conn.Close();
         }
         catch (Exception ex)
