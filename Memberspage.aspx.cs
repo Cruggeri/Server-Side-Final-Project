@@ -13,6 +13,7 @@ public partial class Memberspage : System.Web.UI.Page
         {
             Response.Write("You must be logged in to view the Members area - Please sign in");
             Response.Write("<a href='Loginpage.aspx'> sign in</a>");
+            Response.Redirect("Unauthorizedpage.aspx");
         }
         else
         {
