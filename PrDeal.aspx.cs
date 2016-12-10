@@ -13,6 +13,7 @@ public partial class PrDeal : System.Web.UI.Page
         {
             Response.Write("You must be signed in in to view our premium deals - Please sign in");
             Response.Write("<a href='Loginpage.aspx'> sign in</a>");
+              Response.Redirect("Unauthorizedpage.aspx");
         }
         else
         {
