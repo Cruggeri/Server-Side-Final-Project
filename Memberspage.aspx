@@ -4,8 +4,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <div>
-        
-    </div>
+   <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 center-block">
+                <asp:Button ID="Button1" runat="server" Text="Submit a Deal" OnClick="Button1_Click" />
+                </div>
+            </div>
+        </div>
    
 </asp:Content>
