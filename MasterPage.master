@@ -42,13 +42,13 @@
            
             <ul class="nav navbar-nav">
                 <li class="active">
-                    <a href="/Homepage.aspx">Home<span class="glyphicon glyphicon-home"></span> </a>
+                    <a href="Homepage.aspx">Home<span class="glyphicon glyphicon-home"></span> </a>
                 </li>
                 <li>
-                    <a href="/AboutUs.aspx">About Us<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="AboutUs.aspx">About Us<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
                 <li>
-                    <a href="/Contact.aspx">Contact Us<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="Contact.aspx">Contact Us<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
                 <li>
                     <a href="PrDeal.aspx">Premium Deals<span class="glyphicon glyphicon-user"></span> </a>
@@ -57,10 +57,10 @@
                     <a href="Memberspage.aspx">Members<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
                 <li>
-                    <a href="SubmitDeal.aspx">Submit a Deal<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="Products.aspx">Browse Items for Sale<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
                 <li>
-                    <a href="Products.aspx">Browse Items for Sale<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="Adminspage.aspx">Admins Page<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
             </ul>
 
@@ -120,15 +120,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <h6>Address</h6>
-                    <p>
-                        5500 St Louis Ave
-                        (773) 583-4050
-                    </p>
+                    <h6>Archeatech</h6>
+                    
                 </div>
                 <div class="col-sm-4">
-                    <h6>About us</h6>
-                    <p>kdhakdkjsahdjkashkdahkjdaskahdkjashkdjahs</p>
+                    <h6>Contact Us</h6>
+                    <p>5500 St Louis Ave
+                        (773) 583-4050</p>
                 </div>
                 <div class="col-sm-3">
                     <h6>Navigation</h6>
