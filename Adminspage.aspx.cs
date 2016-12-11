@@ -16,6 +16,36 @@ public partial class Adminspage : Page
             Response.Redirect("Unauthorizedpage.aspx");
 
         }
+
+
+        var conn =
+                new SqlConnection(
+                    "Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True");
+        conn.Open();
+
+        var query = "select count(*) as name from Users";
+
+
+        var cmd = new SqlCommand(query, conn);
+
+       var     x = Convert.ToInt32(cmd.ExecuteScalar().ToString());
+        regusers.Text = "there are "+x+" registered user/s";
+
+        conn.Close();
+        try
+        {
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        catch (
+            Exception ex)
+        {
+            Response.Write
+            ("Error:" +
+             ex
+            );
+        }
     }
 
     protected void Button1_Click(object sender, EventArgs e)

@@ -11,8 +11,7 @@ public partial class Memberspage : System.Web.UI.Page
     {
         if (Session["user"] == null)
         {
-            Response.Write("You must be logged in to view the Members area - Please sign in");
-            Response.Write("<a href='Loginpage.aspx'> sign in</a>");
+          
             Response.Redirect("Unauthorizedpage.aspx");
         }
         else
@@ -21,5 +20,13 @@ public partial class Memberspage : System.Web.UI.Page
             Response.Write("<br/><a href='logout.aspx'>Logout</a>");
 
         }
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("SubmitDeal.aspx");
+    }
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("PrDeal.aspx");
     }
 }

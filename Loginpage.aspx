@@ -3,7 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-     <div class="container-fluid">
+      
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 center-block">
                 <asp:Label runat="server" Text="Login Page" Font-Size="40px" Font-Bold="True"></asp:Label> <br/><br/>
@@ -52,5 +53,5 @@
     </div>
   
     
+          
 </asp:Content>
-

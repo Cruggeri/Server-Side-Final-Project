@@ -8,7 +8,7 @@ public partial class Loginpage : Page
     {
     }
 
-   protected void Button1_Click(object sender, EventArgs e)
+    protected void Button1_Click(object sender, EventArgs e)
     {
         var conn =
             new SqlConnection(
