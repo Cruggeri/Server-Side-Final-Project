@@ -41,7 +41,7 @@
                 <asp:TextBox ID="adminPassword" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ValidationGroup="admin" ID="RequiredFieldValidator4" runat="server" ControlToValidate="adminPassword" ErrorMessage="Please enter password" ForeColor="red"></asp:RequiredFieldValidator><br/>
                 <br/>
-                <asp:Label ID="Label5" runat="server" Text="Label" Visible="False" ForeColor="red"></asp:Label>
+                <asp:Label ID="adminErrorLabel" runat="server" Text="Label" Visible="False" ForeColor="red"></asp:Label>
                 <br/>
                 
             </div>

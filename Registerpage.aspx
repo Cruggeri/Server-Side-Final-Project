@@ -22,7 +22,7 @@
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ForeColor="red" runat="server" ErrorMessage="Please enter surname" ControlToValidate="Surname"></asp:RequiredFieldValidator>
                 <br/>
                 <asp:Label ID="Label6" runat="server" Text="Gender"></asp:Label>
-                <asp:RadioButton ID="RadioButtonMale" Text="Male" runat="server" OnCheckedChanged="RadioButton1_CheckedChanged"/>
+                <asp:RadioButton ID="RadioButtonMale" Text="Male" runat="server" OnCheckedChanged="RadioButtonMale_CheckedChanged"/>
                 <asp:RadioButton ID="RadioButtonFemale" runat="server" Text="Female" OnCheckedChanged="RadioButtonFemale_CheckedChanged"/>
                 <br/>
                 <asp:Label ID="Label3" runat="server" Text="Username:"></asp:Label>
@@ -50,6 +50,6 @@
         </div>
         <br/>
         <asp:Button ID="Button2" runat="server" Text="Submit" OnClick="Button1_Click" />
-    </div>
-    </div>
+    
+    
 </asp:Content>
