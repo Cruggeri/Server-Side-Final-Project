@@ -45,32 +45,32 @@
                     <a href="Homepage.aspx">Home<span class="glyphicon glyphicon-home"></span> </a>
                 </li>
                 <li>
-                    <a href="AboutUs.aspx">About Us<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="AboutUs.aspx">About Us<span class="glyphicon glyphicon-info-sign"></span> </a>
                 </li>
                 <li>
-                    <a href="Contact.aspx">Contact Us<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="Contact.aspx">Contact Us<span class="glyphicon glyphicon-envelope"></span> </a>
                 </li>
                 <li>
-                    <a href="PrDeal.aspx">Premium Deals<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="Memberspage.aspx">Members<span class="glyphicon glyphicon-thumbs-up"></span> </a>
                 </li>
                 <li>
-                    <a href="Memberspage.aspx">Members<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="Products.aspx">Browse Items for Sale<span class="glyphicon glyphicon-camera"></span> </a>
                 </li>
                 <li>
-                    <a href="Products.aspx">Browse Items for Sale<span class="glyphicon glyphicon-user"></span> </a>
-                </li>
-                <li>
-                    <a href="Adminspage.aspx">Admins Page<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="Adminspage.aspx">Admins Page<span class="glyphicon glyphicon-sunglasses"></span> </a>
                 </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
+               
                 <li>
-                    <a href="Registerpage.aspx">Sign Up<span class="glyphicon glyphicon-user"></span> </a>
+                    <a  href="Registerpage.aspx">Sign Up<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
                 <li>
                     <a href="Loginpage.aspx">Login<span class="glyphicon glyphicon-log-in"></span></a>
                 </li>
+                
+                   
             </ul>
 
 
