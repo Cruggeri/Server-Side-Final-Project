@@ -8,7 +8,7 @@ public partial class Registerpage : Page
     private char gender;
     private int x;
 
-    protected void RadioButton1_CheckedChanged(object sender, EventArgs e)
+    protected void RadioButtonMale_CheckedChanged(object sender, EventArgs e)
     {
         gender = 'm';
     }
