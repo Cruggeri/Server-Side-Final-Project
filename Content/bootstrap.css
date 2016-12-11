@@ -123,8 +123,7 @@ input,
 optgroup,
 select,
 textarea {
-  margin: 0;
-  font: inherit;
+  margin: 18px 0 0 0;
   color: inherit;
 }
 button {
@@ -2260,6 +2259,7 @@ pre code {
 }
 table {
   background-color: transparent;
+    margin-top: 0px;
 }
 caption {
   padding-top: 8px;

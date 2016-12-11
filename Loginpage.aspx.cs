@@ -8,7 +8,7 @@ public partial class Loginpage : Page
     {
     }
 
-    protected void Button1_Click(object sender, EventArgs e)
+   protected void Button1_Click(object sender, EventArgs e)
     {
         var conn =
             new SqlConnection(
@@ -29,6 +29,7 @@ public partial class Loginpage : Page
             if (Password.Text == password)
             {
                 Session["user"] = Username.Text;
+                Session["admin"] = 1;
                 Response.Redirect("Memberspage.aspx");
             }
             else
@@ -65,12 +66,13 @@ public partial class Loginpage : Page
             if (adminPassword.Text == password)
             {
                 Session["user"] = adminUsername.Text;
+                Session["admin"] = 0;
                 Response.Redirect("Adminspage.aspx");
             }
             else
             {
-                errorLabel.Visible = true;
-                errorLabel.Text = "Username and Password do not match";
+                adminErrorLabel.Visible = true;
+                adminErrorLabel.Text = "Username and Password do not match";
             }
             conn.Close();
         }

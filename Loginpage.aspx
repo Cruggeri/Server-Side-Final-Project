@@ -3,8 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-      
-    <div class="container-fluid">
+     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 center-block">
                 <asp:Label runat="server" Text="Login Page" Font-Size="40px" Font-Bold="True"></asp:Label> <br/><br/>
@@ -41,7 +40,7 @@
                 <asp:TextBox ID="adminPassword" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ValidationGroup="admin" ID="RequiredFieldValidator4" runat="server" ControlToValidate="adminPassword" ErrorMessage="Please enter password" ForeColor="red"></asp:RequiredFieldValidator><br/>
                 <br/>
-                <asp:Label ID="Label5" runat="server" Text="Label" Visible="False" ForeColor="red"></asp:Label>
+                <asp:Label ID="adminErrorLabel" runat="server" Text="Label" Visible="False" ForeColor="red"></asp:Label>
                 <br/>
                 
             </div>
@@ -53,5 +52,5 @@
     </div>
   
     
-          
 </asp:Content>
+

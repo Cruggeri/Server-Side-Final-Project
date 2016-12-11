@@ -45,32 +45,32 @@
                     <a href="Homepage.aspx">Home<span class="glyphicon glyphicon-home"></span> </a>
                 </li>
                 <li>
-                    <a href="AboutUs.aspx">About Us<span class="glyphicon glyphicon-info-sign"></span> </a>
+                    <a href="AboutUs.aspx">About Us<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
                 <li>
-                    <a href="Contact.aspx">Contact Us<span class="glyphicon glyphicon-envelope"></span> </a>
+                    <a href="Contact.aspx">Contact Us<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
                 <li>
-                    <a href="Memberspage.aspx">Members<span class="glyphicon glyphicon-thumbs-up"></span> </a>
+                    <a href="PrDeal.aspx">Premium Deals<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
                 <li>
-                    <a href="Products.aspx">Browse Items for Sale<span class="glyphicon glyphicon-camera"></span> </a>
+                    <a href="Memberspage.aspx">Members<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
                 <li>
-                    <a href="Adminspage.aspx">Admins Page<span class="glyphicon glyphicon-sunglasses"></span> </a>
+                    <a href="Products.aspx">Browse Items for Sale<span class="glyphicon glyphicon-user"></span> </a>
+                </li>
+                <li id="adminLog" runat="server" visible="false">
+                    <a href="Adminspage.aspx">Admins Page<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-               
                 <li>
-                    <a  href="Registerpage.aspx">Sign Up<span class="glyphicon glyphicon-user"></span> </a>
+                    <a href="Registerpage.aspx">Sign Up<span class="glyphicon glyphicon-user"></span> </a>
                 </li>
                 <li>
                     <a href="Loginpage.aspx">Login<span class="glyphicon glyphicon-log-in"></span></a>
                 </li>
-                
-                   
             </ul>
 
 
@@ -82,7 +82,7 @@
     <div class="page-header no-padding no-margin">
         <div class="banner">
 
-            <h1 style="align-content: center">Archeotech</h1>
+            <h1 style="align-content: center">Archaeotech</h1>
 
         </div>
     </div>
@@ -120,7 +120,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <h6>Archeatech</h6>
+                    <h6>Archaeotech</h6>
                     
                 </div>
                 <div class="col-sm-4">
