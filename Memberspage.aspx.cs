@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -20,6 +21,39 @@ public partial class Memberspage : System.Web.UI.Page
             Response.Write("<br/><a href='logout.aspx'>Logout</a>");
 
         }
+
+
+        try
+        {
+            var conn =
+                new SqlConnection(
+                    "Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True");
+            conn.Open();
+            var query =
+                "select * from [Users] where userName='" + Session["user"] + "'";
+            var cmd = new SqlCommand(query, conn);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                name.Text = reader["name"].ToString();
+                surname.Text = reader["surname"].ToString();
+                username.Text = reader["userName"].ToString();
+                password.Text = reader["pwd"].ToString();
+                gender.Text = reader["gender"].ToString();
+                emailAddress.Text = reader["emailAdd"].ToString();
+                userImg.ImageUrl = reader["image"].ToString();
+            }
+               
+          
+
+            conn.Close();
+        }
+        catch (Exception ex)
+        {
+            Response.Write("Error:" + ex);
+        }
+    
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
