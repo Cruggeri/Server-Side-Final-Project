@@ -10,31 +10,20 @@
                 <asp:Label runat="server" Text="List of registered users:" Font-Size="30px" Font-Bold="True"></asp:Label>
 
                 <br/>
-                <br/>
-                <asp:GridView ID="GridView3" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource4">
+                <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource4" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id">
                     <Columns>
-                        <asp:CommandField ShowEditButton="True" />
                         <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id"/>
                         <asp:BoundField DataField="name" HeaderText="name" SortExpression="name"/>
                         <asp:BoundField DataField="surname" HeaderText="surname" SortExpression="surname"/>
-                        <asp:BoundField DataField="userName" HeaderText="userName" SortExpression="userName"/>
-                        <asp:BoundField DataField="pwd" HeaderText="pwd" SortExpression="pwd"/>
-                        <asp:BoundField DataField="gender" HeaderText="gender" SortExpression="gender"/>
-                        <asp:BoundField DataField="emailAdd" HeaderText="emailAdd" SortExpression="emailAdd"/>
-                        <asp:BoundField DataField="image" HeaderText="image" SortExpression="image"/>
-                        <asp:CommandField ShowEditButton="True" />
-                        <asp:TemplateField ShowHeader="False">
-                            <ItemTemplate>
-                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete"></asp:LinkButton>
-                            </ItemTemplate>
-                        </asp:TemplateField>
+                        <asp:BoundField DataField="userName" HeaderText="userName" SortExpression="userName" />
+                        <asp:BoundField DataField="pwd" HeaderText="pwd" SortExpression="pwd" />
+                        <asp:BoundField DataField="gender" HeaderText="gender" SortExpression="gender" />
+                        <asp:BoundField DataField="emailAdd" HeaderText="emailAdd" SortExpression="emailAdd" />
+                        <asp:BoundField DataField="image" HeaderText="image" SortExpression="image" />
                     </Columns>
                 </asp:GridView>
-                <br/>
-                <br/>
-                <br/>
                 <asp:Label ID="regusers" runat="server" Text=""></asp:Label>
-                <br/>
+                <br />
                 <br/>
                 <asp:Button ID="Button1" runat="server" Text="Reset the list" OnClick="Button1_Click"/>
                 <br/>
@@ -42,9 +31,9 @@
                 <br/>
                 <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Users] WHERE [Id] = @original_Id AND [name] = @original_name AND [surname] = @original_surname AND [userName] = @original_userName AND [pwd] = @original_pwd AND [gender] = @original_gender AND [emailAdd] = @original_emailAdd AND [image] = @original_image" InsertCommand="INSERT INTO [Users] ([name], [surname], [userName], [pwd], [gender], [emailAdd], [image]) VALUES (@name, @surname, @userName, @pwd, @gender, @emailAdd, @image)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Users]" UpdateCommand="UPDATE [Users] SET [name] = @name, [surname] = @surname, [userName] = @userName, [pwd] = @pwd, [gender] = @gender, [emailAdd] = @emailAdd, [image] = @image WHERE [Id] = @original_Id AND [name] = @original_name AND [surname] = @original_surname AND [userName] = @original_userName AND [pwd] = @original_pwd AND [gender] = @original_gender AND [emailAdd] = @original_emailAdd AND [image] = @original_image">
                     <DeleteParameters>
-                        <asp:Parameter Name="original_id" Type="Int32"/>
-                        <asp:Parameter Name="original_name" Type="String"/>
-                        <asp:Parameter Name="original_surname" Type="String"/>
+                        <asp:Parameter Name="original_Id" Type="Int32" />
+                        <asp:Parameter Name="original_name" Type="String" />
+                        <asp:Parameter Name="original_surname" Type="String" />
                         <asp:Parameter Name="original_userName" Type="String" />
                         <asp:Parameter Name="original_pwd" Type="String" />
                         <asp:Parameter Name="original_gender" Type="String" />
@@ -52,22 +41,22 @@
                         <asp:Parameter Name="original_image" Type="String" />
                     </DeleteParameters>
                     <InsertParameters>
-                        <asp:Parameter Name="name" Type="String"/>
-                        <asp:Parameter Name="surname" Type="String"/>
+                        <asp:Parameter Name="name" Type="String" />
+                        <asp:Parameter Name="surname" Type="String" />
                         <asp:Parameter Name="userName" Type="String" />
                         <asp:Parameter Name="pwd" Type="String" />
                         <asp:Parameter Name="gender" Type="String" />
                         <asp:Parameter Name="emailAdd" Type="String" />
-                        <asp:Parameter Name="image" Type="String" />
+                        <asp:Parameter Name="image" Type="Object" />
                     </InsertParameters>
                     <UpdateParameters>
-                        <asp:Parameter Name="name" Type="String"/>
-                        <asp:Parameter Name="surname" Type="String"/>
-                        <asp:Parameter Name="userName" Type="Int32"/>
-                        <asp:Parameter Name="pwd" Type="String"/>
-                        <asp:Parameter Name="gender" Type="String"/>
+                        <asp:Parameter Name="name" Type="String" />
+                        <asp:Parameter Name="surname" Type="String" />
+                        <asp:Parameter Name="userName" Type="String" />
+                        <asp:Parameter Name="pwd" Type="String" />
+                        <asp:Parameter Name="gender" Type="String" />
                         <asp:Parameter Name="emailAdd" Type="String" />
-                        <asp:Parameter Name="image" Type="String" />
+                        <asp:Parameter Name="image" Type="Object" />
                         <asp:Parameter Name="original_Id" Type="Int32" />
                         <asp:Parameter Name="original_name" Type="String" />
                         <asp:Parameter Name="original_surname" Type="String" />
@@ -102,13 +91,10 @@
 
 
                 <asp:Label runat="server" Text="List of admins:" Font-Size="30px" Font-Bold="True"></asp:Label>
-                <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" DataSourceID="SqlDataSource3" AutoGenerateColumns="False" DataKeyNames="id">
+                <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" DataSourceID="SqlDataSource3">
                     <Columns>
-                        <asp:CommandField ShowEditButton="True" />
-                        <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
-                        <asp:BoundField DataField="userName" HeaderText="userName" SortExpression="userName" />
-                        <asp:BoundField DataField="pwd" HeaderText="pwd" SortExpression="pwd" />
-                        <asp:CommandField ShowEditButton="True" />
+                        <asp:CommandField ShowEditButton="True" ShowSelectButton="True"/>
+                        <asp:CommandField ShowEditButton="True"/>
                         <asp:TemplateField ShowHeader="False">
                             <ItemTemplate>
                                 <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete"></asp:LinkButton>

@@ -16,7 +16,7 @@
     <asp:TextBox ID="TopicTextBox" runat="server"  Text="enter a topic here..." Visible="false"></asp:TextBox>
     <br />
     <br />
-    <asp:TextBox ID="MessageTextBox" runat="server" Height="47px" TextMode="MultiLine" Width="193px" Text="What seems to be the issue?" Font-Italic="True"></asp:TextBox>
+    <asp:TextBox ID="MessageTextBox" runat="server" Height="47px" TextMode="MultiLine" Width="193px" Text="What seems to be the issue?" Font-Italic="True" ForeColor="Blue"></asp:TextBox>
     <br />
     <asp:Button ID="SubmitButton" runat="server" Text="Submit" OnClick="SubmitButton_Click" />
     <br />
