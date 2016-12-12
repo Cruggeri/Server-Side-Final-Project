@@ -116,6 +116,57 @@
                         </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
+                
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                
+                 <asp:Label runat="server" Text="List of products:" Font-Size="30px" Font-Bold="True"></asp:Label>
+                <br/>
+                <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" DataSourceID="SqlDataSource1">
+                    <Columns>
+                        <asp:CommandField ShowEditButton="True" />
+                        <asp:CommandField ShowEditButton="True" />
+                        <asp:TemplateField ShowHeader="False">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete"></asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
+                
+                <asp:Button ID="Button2" runat="server" Text="Submit a product" OnClick="Button2_Click" />
+                
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Products] WHERE [Id] = @original_Id AND [prodName] = @original_prodName AND [prodType] = @original_prodType AND [prodPrice] = @original_prodPrice AND [prodImage] = @original_prodImage" InsertCommand="INSERT INTO [Products] ([Id], [prodName], [prodType], [prodPrice], [prodImage]) VALUES (@Id, @prodName, @prodType, @prodPrice, @prodImage)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Products]" UpdateCommand="UPDATE [Products] SET [prodName] = @prodName, [prodType] = @prodType, [prodPrice] = @prodPrice, [prodImage] = @prodImage WHERE [Id] = @original_Id AND [prodName] = @original_prodName AND [prodType] = @original_prodType AND [prodPrice] = @original_prodPrice AND [prodImage] = @original_prodImage">
+                    <DeleteParameters>
+                        <asp:Parameter Name="original_Id" Type="Int32" />
+                        <asp:Parameter Name="original_prodName" Type="String" />
+                        <asp:Parameter Name="original_prodType" Type="String" />
+                        <asp:Parameter Name="original_prodPrice" Type="String" />
+                        <asp:Parameter Name="original_prodImage" Type="String" />
+                    </DeleteParameters>
+                    <InsertParameters>
+                        <asp:Parameter Name="Id" Type="Int32" />
+                        <asp:Parameter Name="prodName" Type="String" />
+                        <asp:Parameter Name="prodType" Type="String" />
+                        <asp:Parameter Name="prodPrice" Type="String" />
+                        <asp:Parameter Name="prodImage" Type="String" />
+                    </InsertParameters>
+                    <UpdateParameters>
+                        <asp:Parameter Name="prodName" Type="String" />
+                        <asp:Parameter Name="prodType" Type="String" />
+                        <asp:Parameter Name="prodPrice" Type="String" />
+                        <asp:Parameter Name="prodImage" Type="String" />
+                        <asp:Parameter Name="original_Id" Type="Int32" />
+                        <asp:Parameter Name="original_prodName" Type="String" />
+                        <asp:Parameter Name="original_prodType" Type="String" />
+                        <asp:Parameter Name="original_prodPrice" Type="String" />
+                        <asp:Parameter Name="original_prodImage" Type="String" />
+                    </UpdateParameters>
+                </asp:SqlDataSource>
 
             </div>
 
