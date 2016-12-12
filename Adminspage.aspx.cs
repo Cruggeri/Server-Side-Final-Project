@@ -6,7 +6,7 @@ public partial class Adminspage : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (("john" == (String)(Session["user"])) || ("chris" == (String)(Session["user"])))
+        if (("admin" == (String)(Session["user"])) )
         {
             Response.Write("Welcome admin");
             Response.Write("<br/><a href='logout.aspx'>Logout</a>");

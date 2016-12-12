@@ -13,7 +13,7 @@
                 <asp:RequiredFieldValidator ValidationGroup="member" ID="RequiredFieldValidator1" runat="server" ControlToValidate="Username" ErrorMessage="Please enter username" ForeColor="red"></asp:RequiredFieldValidator>
                 <br/>
                 <asp:Label ID="Label2" runat="server" Text="Password:"></asp:Label>
-                <asp:TextBox ID="Password" runat="server"></asp:TextBox>
+                <asp:TextBox ID="Password" TextMode="Password" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ValidationGroup="member" ID="RequiredFieldValidator2" runat="server" ControlToValidate="Password" ErrorMessage="Please enter password" ForeColor="red"></asp:RequiredFieldValidator><br/>
                 <br/>
                 <asp:Label ID="errorLabel" runat="server" Text="Label" Visible="False" ForeColor="red"></asp:Label>
@@ -38,7 +38,7 @@
                 <asp:RequiredFieldValidator ValidationGroup="admin" ID="RequiredFieldValidator3" runat="server" ControlToValidate="adminUsername" ErrorMessage="Please enter username" ForeColor="red"></asp:RequiredFieldValidator>
                 <br/>
                 <asp:Label ID="Label4" runat="server" Text="Password:"></asp:Label>
-                <asp:TextBox ID="adminPassword" runat="server"></asp:TextBox>
+                <asp:TextBox ID="adminPassword" runat="server" TextMode="Password"></asp:TextBox>
                 <asp:RequiredFieldValidator ValidationGroup="admin" ID="RequiredFieldValidator4" runat="server" ControlToValidate="adminPassword" ErrorMessage="Please enter password" ForeColor="red"></asp:RequiredFieldValidator><br/>
                 <br/>
                 <asp:Label ID="Label5" runat="server" Text="Label" Visible="False" ForeColor="red"></asp:Label>

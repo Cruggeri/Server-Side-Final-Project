@@ -6,7 +6,7 @@
 <head runat="server">
     <link href="Content/bootstrap.css" rel="stylesheet"/>
     <script src="Scripts/jquery-3.1.1.js"></script>
-   <%-- <link href="css/bootstrap.css" rel="stylesheet"/>--%>
+    <%-- <link href="css/bootstrap.css" rel="stylesheet"/>--%>
     <script src="Scripts/bootstrap.js"></script>
     <%--<link href="css/StyleSheet.css" rel="stylesheet"/>--%>
 
@@ -15,31 +15,34 @@
     </asp:ContentPlaceHolder>
 
     <script type="text/javascript">
-        $(document).ready(function () {
-            var url = window.location;
-            $('ul.nav li a').each(function () {
-                if (this.href == url) {
-                    $("ul.nav li").each(function () {
-                        if ($(this).hasClass("active")) {
-                            $(this).removeClass("active");
+        $(document)
+            .ready(function() {
+                var url = window.location;
+                $('ul.nav li a')
+                    .each(function() {
+                        if (this.href == url) {
+                            $("ul.nav li")
+                                .each(function() {
+                                    if ($(this).hasClass("active")) {
+                                        $(this).removeClass("active");
+                                    }
+                                });
+                            $(this).parent().addClass('active');
                         }
                     });
-                    $(this).parent().addClass('active');
-                }
             });
-        });
-</script>
+    </script>
 </head>
 <body>
 <form id="form1" runat="server">
-     <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server"/>
+    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server"/>
 
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Archeotech</a>
             </div>
-           
+
             <ul class="nav navbar-nav">
                 <li class="active">
                     <a href="Homepage.aspx">Home<span class="glyphicon glyphicon-home"></span> </a>
@@ -62,15 +65,19 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-               
                 <li>
-                    <a  href="Registerpage.aspx">Sign Up<span class="glyphicon glyphicon-user"></span> </a>
+                    
+                     <asp:HyperLink ID="signup" runat="server" NavigateUrl="Registerpage.aspx" >Register<span class="glyphicon glyphicon-user"></span></asp:HyperLink>
+ 
                 </li>
+
                 <li>
-                    <a href="Loginpage.aspx">Login<span class="glyphicon glyphicon-log-in"></span></a>
+                  
+                       <asp:HyperLink ID="login" runat="server" NavigateUrl="Loginpage.aspx" >login<span class="glyphicon glyphicon-log-in"></span></asp:HyperLink>
+
                 </li>
                 
-                   
+
             </ul>
 
 
@@ -121,12 +128,14 @@
             <div class="row">
                 <div class="col-sm-3">
                     <h6>Archeatech</h6>
-                    
+
                 </div>
                 <div class="col-sm-4">
                     <h6>Contact Us</h6>
-                    <p>5500 St Louis Ave
-                        (773) 583-4050</p>
+                    <p>
+                        5500 St Louis Ave
+                        (773) 583-4050
+                    </p>
                 </div>
                 <div class="col-sm-3">
                     <h6>Navigation</h6>
