@@ -29,6 +29,8 @@ public partial class Loginpage : Page
             if (Password.Text == password)
             {
                 Session["user"] = Username.Text;
+                Session["admin"] = 1; //weird things happen when checking the admin session variable while it holds a 'null' value
+                                        //so this sets the variable to 1 (admin sessions store a 0)
                 Response.Redirect("Memberspage.aspx");
             }
             else
@@ -65,12 +67,13 @@ public partial class Loginpage : Page
             if (adminPassword.Text == password)
             {
                 Session["user"] = adminUsername.Text;
+                Session["admin"] = 0;//a 0 in this variable marks an admin session;
                 Response.Redirect("Adminspage.aspx");
             }
             else
             {
-                errorLabel.Visible = true;
-                errorLabel.Text = "Username and Password do not match";
+                adminErrorLabel.Visible = true;
+                adminErrorLabel.Text = "Username and Password do not match";
             }
             conn.Close();
         }

@@ -5,23 +5,21 @@ using System.Web.UI;
 
 public partial class Registerpage : Page
 {
-    String gender;
+    private char gender;
     private int x;
 
     protected void RadioButtonMale_CheckedChanged(object sender, EventArgs e)
     {
-        gender = "male";
+        gender = 'm';
     }
 
     protected void RadioButtonFemale_CheckedChanged(object sender, EventArgs e)
     {
-        gender = "female";
+        gender = 'f';
     }
-   
+
     protected void Page_Load(object sender, EventArgs e)
     {
-   
-
         if (IsPostBack)
         {
             var conn =
@@ -62,7 +60,7 @@ public partial class Registerpage : Page
                 cmd.Parameters.AddWithValue("@surname", Surname.Text);
                 cmd.Parameters.AddWithValue("@username", Username.Text);
                 cmd.Parameters.AddWithValue("@password", Password.Text);
-                cmd.Parameters.AddWithValue("@gender", RadioButtonList1.SelectedValue.ToString());
+                cmd.Parameters.AddWithValue("@gender", gender.ToString());
                 cmd.Parameters.AddWithValue("@email", emailAddress.Text);
                 cmd.Parameters.AddWithValue("@image", Image1.ImageUrl);
 
@@ -108,8 +106,4 @@ public partial class Registerpage : Page
             }
         }
     }
-
-    
-   
-
 }

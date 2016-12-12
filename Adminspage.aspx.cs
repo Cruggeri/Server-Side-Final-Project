@@ -6,10 +6,27 @@ public partial class Adminspage : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (("admin" == (String)(Session["user"])) )
+        int v = 0;
+        //("john" == (String)(Session["user"])) || ("chris" == (String)(Session["user"])))
+
+        if (Session["user"] != null)
         {
-            Response.Write("Welcome admin");
-            Response.Write("<br/><a href='logout.aspx'>Logout</a>");
+            try
+            {
+                if (v == (Int32)(Session["admin"])) // checks for admin session marker
+                {
+                    Response.Write("Welcome admin");
+                    Response.Write("<br/><a href='logout.aspx'>Logout</a>");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write
+                ("Error:" + ex);
+            }
+
         }
         else
         {
