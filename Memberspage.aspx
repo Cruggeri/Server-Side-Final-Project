@@ -10,7 +10,7 @@
 
         <div class="container">
             <div>
-                <h3 id =" sellPanel">Seller Panel</h3>
+                <h3 id =" sellPanel">Seller Panel- FULL IMPLEMENT COMING SOON</h3>
             </div>
           <asp:Table ID="Table1" runat="server" BorderWidth="1px" BorderStyle="Groove" GridLines="Both" ToolTip="They may be old, but somebody out there still wants 'em" Width="599px" Caption="Your items currently for sale">
             <asp:TableHeaderRow ID="tHed">
@@ -32,7 +32,7 @@
         
     <asp:Label ID="prNameLabel" runat="server" Text="Product Name: "></asp:Label>
     <asp:TextBox ID="prName" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="nameRequiredFieldValidator" runat="server" ErrorMessage="Name field may not be left empty" ControlToValidate="prName" ForeColor="Red"></asp:RequiredFieldValidator>      
+        <asp:RequiredFieldValidator ID="nameRequiredFieldValidator" runat="server" ErrorMessage="Name field may not be left empty" ControlToValidate="prName" ForeColor="yellow"></asp:RequiredFieldValidator>      
     <br />
     <asp:Label ID="prTypeLabel" runat="server" Text="Product Type: "></asp:Label>
     <asp:DropDownList ID="prTypeDropDownList" runat="server">
