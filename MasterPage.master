@@ -1,4 +1,4 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+ï»¿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html>
 
@@ -6,43 +6,40 @@
 <head runat="server">
     <link href="Content/bootstrap.css" rel="stylesheet"/>
     <script src="Scripts/jquery-3.1.1.js"></script>
-    <%-- <link href="css/bootstrap.css" rel="stylesheet"/>--%>
+   <%-- <link href="css/bootstrap.css" rel="stylesheet"/>--%>
     <script src="Scripts/bootstrap.js"></script>
-    <%--<link href="css/StyleSheet.css" rel="stylesheet"/>--%>
+    <link href="content/StyleSheet.css" rel="stylesheet"/>
 
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 
     <script type="text/javascript">
-        $(document)
-            .ready(function() {
-                var url = window.location;
-                $('ul.nav li a')
-                    .each(function() {
-                        if (this.href == url) {
-                            $("ul.nav li")
-                                .each(function() {
-                                    if ($(this).hasClass("active")) {
-                                        $(this).removeClass("active");
-                                    }
-                                });
-                            $(this).parent().addClass('active');
+        $(document).ready(function () {
+            var url = window.location;
+            $('ul.nav li a').each(function () {
+                if (this.href == url) {
+                    $("ul.nav li").each(function () {
+                        if ($(this).hasClass("active")) {
+                            $(this).removeClass("active");
                         }
                     });
+                    $(this).parent().addClass('active');
+                }
             });
-    </script>
+        });
+</script>
 </head>
 <body>
 <form id="form1" runat="server">
-    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server"/>
+     <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server"/>
 
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Archeotech</a>
+                <a class="navbar-brand" href="#">Archaeotech</a>
             </div>
-
+           
             <ul class="nav navbar-nav">
                 <li class="active">
                     <a href="Homepage.aspx">Home<span class="glyphicon glyphicon-home"></span> </a>
@@ -59,25 +56,21 @@
                 <li>
                     <a href="Products.aspx">Browse Items for Sale<span class="glyphicon glyphicon-camera"></span> </a>
                 </li>
-                <li>
+                <li id="adminLog" runat="server" visible="false">
                     <a href="Adminspage.aspx">Admins Page<span class="glyphicon glyphicon-sunglasses"></span> </a>
                 </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
+               
                 <li>
-                    
-                     <asp:HyperLink ID="signup" runat="server" NavigateUrl="Registerpage.aspx" >Register<span class="glyphicon glyphicon-user"></span></asp:HyperLink>
- 
+                    <asp:HyperLink ID="signup" runat="server" NavigateUrl="Registerpage.aspx" >Register<span class="glyphicon glyphicon-user"></span></asp:HyperLink>
                 </li>
-
                 <li>
-                  
-                       <asp:HyperLink ID="login" runat="server" NavigateUrl="Loginpage.aspx" >login<span class="glyphicon glyphicon-log-in"></span></asp:HyperLink>
-
+                    <asp:HyperLink ID="login" runat="server" NavigateUrl="Loginpage.aspx" >login<span class="glyphicon glyphicon-log-in"></span></asp:HyperLink>
                 </li>
                 
-
+                   
             </ul>
 
 
@@ -89,10 +82,10 @@
     <div class="page-header no-padding no-margin">
         <div class="banner">
 
-            <h1 style="align-content: center">Archeotech</h1>
+            <h1 id="Topthingy" style="background-color: #CC6600;"><span style=" align-content: center; font-family: Garamond; font-style:italic;font-size:larger;  color: #CC3300;" >Archaeotech</span></h1>
 
         </div>
-    </div>
+   </div>
 
     <div class="row">
         <div class="col-md-2">
@@ -127,17 +120,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <h6>Archeotech Copyright © 2016.</h6>
-
+                    <h6>Archeotech Copyright ï¿½ 2016.</h6>
+                    
                 </div>
                 <div class="col-sm-4">
                     <h6>Contact Us</h6>
-                    <p>
-                        Archeotech@gmail.com <br/>
-                        5500 St Louis Ave <br/>
-                         Chicago, Illinois
-                        (773) 583-4050
-                    </p>
+                    <p>Archeotech@gmail.com <br/>
++                        5500 St Louis Ave <br/>
++                         Chicago, Illinois
+                        (773) 583-4050</p>
                 </div>
                 <div class="col-sm-3">
                     <h6>Navigation</h6>
@@ -149,28 +140,27 @@
                             <a href="AboutUs.aspx">About us</a>
                         </li>
                         <li>
-                            <a href="Contact.aspx">Contact us</a>
+                             <a href="Contact.aspx">Contact us</a>
                         </li>
                         <li>
                             <a href="Memberspage.aspx">Members</a>
                         </li>
                         <li>
                             <a href="Products.aspx">Products</a>
-                        </li>
-                        <li>
-                            <a href="Registerpage.aspx">Register</a>
-                        </li>
-                        <li>
-                            <a href="Loginpage.aspx">Log in</a>
++                        </li>
++                        <li>
++                            <a href="Registerpage.aspx">Register</a>
++                        </li>
++                        <li>
++                            <a href="Loginpage.aspx">Log in</a>
                         </li>
                     </ul>
                 </div>
 
-                <span class="col-sm-2">
-                    <h6><span class="glyphicon glyphicon-thumbs-up"></span>Coded by: <br/> <br/>
-                        John Cervantes <br/>
-                        Chris Ruggeri
-                    </h6>
+                <div class="col-sm-2">
+                    <h6>Coded by:><span class="glyphicon glyphicon-thumbs-up"></span>Coded by: <br/> <br/>
++                        John Cervantes <br/>
++                        Chris Ruggeri </h6>
                 </div>
 
 

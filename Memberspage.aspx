@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-6 center-block">
 
-                <asp:Label runat="server" Text="My Profile" Font-Size="40px" Font-Bold="True"></asp:Label> <br/><br/>
+                <asp:Label id="myprofile" runat="server" Text="My Profile" Font-Size="40px" Font-Bold="True"></asp:Label> <br/><br/>
 
 
             </div>
@@ -18,15 +18,14 @@
                 <asp:Image ID="userImg" runat="server" Width="200px"/>
                 <br/>
                 <br/>
-
                 <asp:Label ID="Label2" runat="server" Font-Size="20px" Font-Bold="True" Text="Registered User Benefits:"></asp:Label> <br/> <br/>
-                <asp:Button ID="Button3" runat="server" Text="Submit a Deal" OnClick="Button1_Click"/> <br/>
-                <asp:Button ID="Button4" runat="server" Text="Premium deals" OnClick="Button2_Click"/>
+                <asp:Button ID="submitButton" runat="server" Text="Submit a Deal" OnClick="submitButton_Click"/> <br/>
+                <asp:Button ID="prButton" runat="server" Text="Premium deals" OnClick="prButton_Click"/>
 
             </div>
-            <div class="col-md-4">
-
-                <asp:Label ID="name" Font-Bold="True" runat="server" Font-Size="30px" Text=""></asp:Label>
+            <div class="col-md-6">
+                
+                <asp:Label id="name" Font-Bold="True" runat="server" Font-Size="30px" Text=""></asp:Label>
                 <asp:Label ID="surname" Font-Bold="True" Font-Size="30px" runat="server" Text=""></asp:Label>
                 <br/>
                 <br/>
@@ -49,5 +48,56 @@
             </div>
         </div>
     </div>
+    <div>
+    <br/>
+          <asp:Button ID="editSelfButton" runat="server" Text="Edit your Profile" />
+
+
+        <div class="container">
+            <div>
+                <h3 id =" sellPanel">Seller Panel- FULL IMPLEMENT COMING SOON</h3>
+            </div>
+          <asp:Table ID="Table1" runat="server" BorderWidth="1px" BorderStyle="Groove" GridLines="Both" ToolTip="They may be old, but somebody out there still wants 'em" Width="599px" Caption="Your items currently for sale">
+            <asp:TableHeaderRow ID="tHed">
+                <asp:TableHeaderCell Scope="Column" Text="Name" />
+                <asp:TableHeaderCell Scope="Column" Text="Type" />
+                <asp:TableHeaderCell Scope="Column" Text="Image" />
+            </asp:TableHeaderRow>
+        </asp:Table>
+         
+        
+       
+        
+          <br />
+          <asp:Label ID="addItemLabel" runat="server" Text="Place an item up for sale"></asp:Label>
+          <br />
+         
+        
+       
+        
+    <asp:Label ID="prNameLabel" runat="server" Text="Product Name: "></asp:Label>
+    <asp:TextBox ID="prName" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="nameRequiredFieldValidator" runat="server" ErrorMessage="Name field may not be left empty" ControlToValidate="prName" ForeColor="yellow"></asp:RequiredFieldValidator>      
+    <br />
+    <asp:Label ID="prTypeLabel" runat="server" Text="Product Type: "></asp:Label>
+    <asp:DropDownList ID="prTypeDropDownList" runat="server">
+        <asp:ListItem>none</asp:ListItem>
+        <asp:ListItem>Shiny Rock</asp:ListItem>
+        <asp:ListItem>Soap-on-a-Rope</asp:ListItem>
+        <asp:ListItem>Welsh Person</asp:ListItem>
+        <asp:ListItem>Shoe Contents</asp:ListItem>
+    </asp:DropDownList>
+        <asp:RequiredFieldValidator ID="prDDLRequiredFieldValidator" runat="server" ErrorMessage="Must choose a product type" ControlToValidate="prTypeDropDownList" ForeColor="Blue" InitialValue="none"></asp:RequiredFieldValidator>
+        <br />
+          <asp:Label ID="uploadPicLabel1" runat="server" Text="you may upload an image of the item belowS"></asp:Label>
+    <asp:FileUpload ID="picFileUpload" runat="server" />
+        <asp:Label ID="picUpLabel" runat="server" Text=""></asp:Label>
+        <asp:RequiredFieldValidator ID="picRequiredFieldValidator" runat="server" ErrorMessage="Must upload a picture" ControlToValidate="picFileUpload" ForeColor="Purple" Display="Dynamic"></asp:RequiredFieldValidator>
+        <br />
+        <asp:Image ID="inImage" runat="server" Height="135px" Width="157px" />
+        <br />
+<asp:Button ID="saveButton" runat="server" Text="submit" OnClick="saveButton_Click" />
+    </div>
+          </div>
 
 </asp:Content>

@@ -38,10 +38,10 @@
                 <asp:RequiredFieldValidator ValidationGroup="admin" ID="RequiredFieldValidator3" runat="server" ControlToValidate="adminUsername" ErrorMessage="Please enter username" ForeColor="red"></asp:RequiredFieldValidator>
                 <br/>
                 <asp:Label ID="Label4" runat="server" Text="Password:"></asp:Label>
-                <asp:TextBox ID="adminPassword" runat="server" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="adminPassword" TextMode="Password" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ValidationGroup="admin" ID="RequiredFieldValidator4" runat="server" ControlToValidate="adminPassword" ErrorMessage="Please enter password" ForeColor="red"></asp:RequiredFieldValidator><br/>
                 <br/>
-                <asp:Label ID="Label5" runat="server" Text="Label" Visible="False" ForeColor="red"></asp:Label>
+                <asp:Label ID="adminErrorLabel" runat="server" Text="Label" Visible="False" ForeColor="red"></asp:Label>
                 <br/>
                 
             </div>

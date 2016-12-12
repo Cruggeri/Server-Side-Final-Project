@@ -29,6 +29,7 @@ public partial class Loginpage : Page
             if (Password.Text == password)
             {
                 Session["user"] = Username.Text;
+                
                 Response.Redirect("Memberspage.aspx");
             }
             else
@@ -69,8 +70,8 @@ public partial class Loginpage : Page
             }
             else
             {
-                errorLabel.Visible = true;
-                errorLabel.Text = "Username and Password do not match";
+                adminErrorLabel.Visible = true;
+                adminErrorLabel.Text = "Username and Password do not match";
             }
             conn.Close();
         }
