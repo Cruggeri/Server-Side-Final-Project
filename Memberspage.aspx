@@ -20,7 +20,7 @@
                 <br/>
                 <asp:Label ID="Label2" runat="server" Font-Size="20px" Font-Bold="True" Text="Registered User Benefits:"></asp:Label> <br/> <br/>
                 <asp:Button ID="submitButton" runat="server" Text="Sell your own product." OnClick="submitButton_Click"/> <br/>
-                <asp:Button ID="prButton" runat="server" Text="Check out theese premium deals" OnClick="prButton_Click"/>
+                <asp:Button ID="prButton" runat="server" Text="Check out these premium deals" OnClick="prButton_Click"/>
 
             </div>
             <div class="col-md-6">
@@ -50,26 +50,31 @@
     </div>
     <div>
     <br/>
-          <asp:Button ID="editSelfButton" runat="server" Text="Edit your Profile" />
+          <asp:Button ID="editSelfButton" runat="server" Text="Change your password" />
 
 
         <div class="container">
             <div>
-                <h3 id =" sellPanel">Seller Panel- FULL IMPLEMENT COMING SOON</h3>
+                <h3 id =" sellPanel" >Seller Panel-</h3>
             </div>
-          <asp:Table ID="Table1" runat="server" BorderWidth="1px" BorderStyle="Groove" GridLines="Both" ToolTip="They may be old, but somebody out there still wants 'em" Width="599px" Caption="Your items currently for sale">
-            <asp:TableHeaderRow ID="tHed">
-                <asp:TableHeaderCell Scope="Column" Text="Name" />
-                <asp:TableHeaderCell Scope="Column" Text="Type" />
-                <asp:TableHeaderCell Scope="Column" Text="Image" />
-            </asp:TableHeaderRow>
-        </asp:Table>
-         
+          <asp:Table ID="Table1"  runat="server" Width="1117px">
+        <asp:TableHeaderRow ID="TableHeaderRow1" runat="server">
+        <asp:TableHeaderCell ID="TableHeaderCell1" runat="server">Products Name:</asp:TableHeaderCell>
+        <asp:TableHeaderCell ID="TableHeaderCell2" runat="server">Products Type:</asp:TableHeaderCell>
+        <asp:TableHeaderCell ID="TableHeaderCell3" runat="server">Products Price:</asp:TableHeaderCell>
+        <asp:TableHeaderCell ID="TableHeaderCell4" runat="server">Products Image:</asp:TableHeaderCell>
+    </asp:TableHeaderRow>
+    </asp:Table>
+    
+     
+    
+    
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Products]"></asp:SqlDataSource>
         
        
         
           <br />
-          <asp:Label ID="addItemLabel" runat="server" Text="Place an item up for sale"></asp:Label>
+          <asp:Label ID="addItemLabel" runat="server" Text="Place an item up for sale" ></asp:Label>
           <br />
          
         
@@ -77,7 +82,7 @@
         
     <asp:Label ID="prNameLabel" runat="server" Text="Product Name: "></asp:Label>
     <asp:TextBox ID="prName" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="nameRequiredFieldValidator" runat="server" ErrorMessage="Name field may not be left empty" ControlToValidate="prName" ForeColor="yellow"></asp:RequiredFieldValidator>      
+        <asp:RequiredFieldValidator ID="nameRequiredFieldValidator" runat="server" ErrorMessage="Name field may not be left empty" ControlToValidate="prName" ForeColor="green"></asp:RequiredFieldValidator>      
     <br />
     <asp:Label ID="prTypeLabel" runat="server" Text="Product Type: "></asp:Label>
     <asp:DropDownList ID="prTypeDropDownList" runat="server">
@@ -87,7 +92,7 @@
         <asp:ListItem>Welsh Person</asp:ListItem>
         <asp:ListItem>Shoe Contents</asp:ListItem>
     </asp:DropDownList>
-        <asp:RequiredFieldValidator ID="prDDLRequiredFieldValidator" runat="server" ErrorMessage="Must choose a product type" ControlToValidate="prTypeDropDownList" ForeColor="Blue" InitialValue="none"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="prDDLRequiredFieldValidator" runat="server" ErrorMessage="Must choose a product type" ControlToValidate="prTypeDropDownList" ForeColor="orange" InitialValue="none"></asp:RequiredFieldValidator>
         <br />
           <asp:Label ID="uploadPicLabel1" runat="server" Text="you may upload an image of the item belowS"></asp:Label>
     <asp:FileUpload ID="picFileUpload" runat="server" />

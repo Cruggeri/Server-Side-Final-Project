@@ -52,6 +52,60 @@ public partial class Memberspage : System.Web.UI.Page
         {
             Response.Write("Error:" + ex);
         }
+        var cnct =
+                new SqlConnection(
+                    "Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True");
+        cnct.Open();
+        var checkUser = "select * from Products where seller='" + Session["user"] + "'";
+        var prodNames = "select prodName from Products";
+        var buyProduct = "delete from Products where prodName ='" +  prButton + "'";//change me
+
+        var cmnd = new SqlCommand(checkUser, cnct);
+        var cmd2 = new SqlCommand(prodNames, cnct);
+
+        try
+        {
+            var reader = cmnd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                var row = new TableRow();
+                var cellName = new TableCell();
+                var cellType = new TableCell();
+
+                var cellPrice = new TableCell();
+                var cellImage = new TableCell();
+
+
+                cellName.Text = reader["prodName"].ToString();
+                cellType.Text = reader["prodType"].ToString();
+                cellPrice.Text = "$" + reader["prodPrice"].ToString();
+                String url = reader["prodImage"].ToString();
+
+                Image prodImage = new Image();
+                prodImage.ImageUrl = url;
+                prodImage.Width = 100;
+                prodImage.Height = 100;
+
+                cellImage.Controls.Add(prodImage);
+
+                row.Cells.Add(cellName);
+                row.Cells.Add(cellType);
+                row.Cells.Add(cellPrice);
+                row.Cells.Add(cellImage);
+
+                Table1.Rows.Add(row);
+
+            }
+
+            cnct.Close();
+        }
+
+
+        catch (Exception ex)
+        {
+            Response.Write(ex.Message);
+        }
     }
 
     protected void saveButton_Click(object sender, EventArgs e)
@@ -74,6 +128,7 @@ public partial class Memberspage : System.Web.UI.Page
                 {
                     if (fileExt == allowedExtensions[v])
                         oak = true;
+                    
                 }
             }
 
