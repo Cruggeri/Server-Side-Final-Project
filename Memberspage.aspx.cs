@@ -69,30 +69,36 @@ public partial class Memberspage : System.Web.UI.Page
 
             while (reader.Read())
             {
+                int rem = 0;
                 var row = new TableRow();
                 var cellName = new TableCell();
                 var cellType = new TableCell();
 
                 var cellPrice = new TableCell();
                 var cellImage = new TableCell();
-
+                var remove = new TableCell();
+                
 
                 cellName.Text = reader["prodName"].ToString();
                 cellType.Text = reader["prodType"].ToString();
                 cellPrice.Text = "$" + reader["prodPrice"].ToString();
                 String url = reader["prodImage"].ToString();
+                String remTarget = reader["prodName"].ToString(); 
 
                 Image prodImage = new Image();
+                //ButtonField
+                    //delProd = new Button();
                 prodImage.ImageUrl = url;
                 prodImage.Width = 100;
                 prodImage.Height = 100;
 
                 cellImage.Controls.Add(prodImage);
-
+                //delProd.Text = "Delete";
                 row.Cells.Add(cellName);
                 row.Cells.Add(cellType);
                 row.Cells.Add(cellPrice);
                 row.Cells.Add(cellImage);
+                //row.Cells.Add(delProd);
 
                 Table1.Rows.Add(row);
 
