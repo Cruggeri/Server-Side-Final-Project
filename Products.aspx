@@ -16,7 +16,15 @@
     </asp:Table>
     <br/>
     <br/>
+    <asp:Label ID="Label1" runat="server" Text="Select the product that you want to purchase: "></asp:Label>
+    <br/>
+    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" Height="16px" Width="261px"></asp:DropDownList>
+    <br/>
+    <asp:Button ID="Button1" runat="server" Text="    Place Your Order    " OnClick="Button1_Click" />
+     
+    
+    
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Products]"></asp:SqlDataSource>
-
+   
 </asp:Content>
 

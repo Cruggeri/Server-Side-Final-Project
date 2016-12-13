@@ -13,7 +13,12 @@ public partial class Products : Page
                 "Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True");
         conn.Open();
         var checkUser = "select * from Products";
+        var prodNames = "select prodName from Products";
+        var buyProduct = "delete from Products where prodName ='" + DropDownList1.SelectedItem + "'"; 
+
         var cmd = new SqlCommand(checkUser, conn);
+        var cmd2 = new SqlCommand(prodNames, conn);
+
         try
         {
             var reader = cmd.ExecuteReader();
@@ -30,7 +35,7 @@ public partial class Products : Page
 
                 cellName.Text = reader["prodName"].ToString();
                 cellType.Text = reader["prodType"].ToString();
-                cellPrice.Text = reader["prodPrice"].ToString();
+                cellPrice.Text = "$" + reader["prodPrice"].ToString();
                 String url = reader["prodImage"].ToString();
 
                 Image prodImage = new Image();
@@ -57,5 +62,40 @@ public partial class Products : Page
         {
             Response.Write(ex.Message);
         }
+
+        conn.Open();
+        try
+        {
+            var reader = cmd2.ExecuteReader();
+
+            while (reader.Read())
+            {
+                DropDownList1.Items.Add(reader[0].ToString());
+            }
+            conn.Close();
+        }
+
+        catch (Exception ex)
+        {
+            Response.Write(ex.Message);
+        }
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        if (Page.IsPostBack)
+        {
+            var conn =
+                new SqlConnection(
+                    "Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True");
+            conn.Open();
+            var buyProduct = "delete from Products where prodName ='" + DropDownList1.SelectedItem + "'";
+            var cmd = new SqlCommand(buyProduct, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        Response.Redirect("Products.aspx");
+
+
     }
 }

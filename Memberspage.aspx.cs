@@ -122,10 +122,10 @@ public partial class Memberspage : System.Web.UI.Page
 
     protected void submitButton_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("SubmitDeal.aspx");
     }
     protected void prButton_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("PrDeal.aspx");
     }
 }

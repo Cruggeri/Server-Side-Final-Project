@@ -19,8 +19,8 @@
                 <br/>
                 <br/>
                 <asp:Label ID="Label2" runat="server" Font-Size="20px" Font-Bold="True" Text="Registered User Benefits:"></asp:Label> <br/> <br/>
-                <asp:Button ID="submitButton" runat="server" Text="Submit a Deal" OnClick="submitButton_Click"/> <br/>
-                <asp:Button ID="prButton" runat="server" Text="Premium deals" OnClick="prButton_Click"/>
+                <asp:Button ID="submitButton" runat="server" Text="Sell your own product." OnClick="submitButton_Click"/> <br/>
+                <asp:Button ID="prButton" runat="server" Text="Check out theese premium deals" OnClick="prButton_Click"/>
 
             </div>
             <div class="col-md-6">

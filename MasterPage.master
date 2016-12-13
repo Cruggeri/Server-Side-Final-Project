@@ -140,25 +140,25 @@
                             <a href="AboutUs.aspx">About us</a>
                         </li>
                         <li>
-                             <a href="Contact.aspx">Contact us</a>
+                            <a href="Contact.aspx">Contact us</a>
                         </li>
                         <li>
                             <a href="Memberspage.aspx">Members</a>
                         </li>
                         <li>
                             <a href="Products.aspx">Products</a>
-+                        </li>
-+                        <li>
-+                            <a href="Registerpage.aspx">Register</a>
-+                        </li>
-+                        <li>
-+                            <a href="Loginpage.aspx">Log in</a>
+                        </li>
+                                            
+                        <li>                            <a href="Registerpage.aspx">Register</a>
+                                                  </li>
+                                             
+                        <li>                           <a href="Loginpage.aspx">Log in</a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="col-sm-2">
-                    <h6>Coded by:><span class="glyphicon glyphicon-thumbs-up"></span>Coded by: <br/> <br/>
+                    <h6><<span class="glyphicon glyphicon-thumbs-up"></span>Coded by: <br/> <br/>
 +                        John Cervantes <br/>
 +                        Chris Ruggeri </h6>
                 </div>

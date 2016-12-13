@@ -21,6 +21,7 @@ html {
 }
 body {
   margin: 0;
+   
 }
 article,
 aside,
@@ -1617,6 +1618,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+    color: #000000;
 }
 .row {
   margin-right: -15px;
@@ -6526,8 +6528,6 @@ button.close {
   display: block;
   margin-right: auto;
   margin-left: auto;
-    top: -1798px;
-    left: -15px;
 }
 .pull-right {
   float: right !important;
