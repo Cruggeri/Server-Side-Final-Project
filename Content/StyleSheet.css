@@ -38,4 +38,14 @@ body
     color:#FFFFCC;
 }
 
- 
+input[type="submit"],input[type=password],input[type=text]
+{
+    color:#CC6600;
+    background-color:#663333;
+    
+}
+textarea, input[type=search], datalist 
+{    
+    color:#CC6600;
+    background-color:#333333;
+}
