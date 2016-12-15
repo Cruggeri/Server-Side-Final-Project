@@ -14,7 +14,7 @@
          <br/>
       
         <div class="col-sm-4">
-            <asp:Image ID="ProdImage" runat="server" Height="200px" Width="200px"></asp:Image> <br/>
+            <asp:Image ID="ProdImage" runat="server" Height="401px" Width="400px"></asp:Image> <br/>
             <asp:FileUpload ID="FileUpload1" runat="server"/>
             <asp:Button ID="Button2" ValidationGroup="image" runat="server" Text="Preview the picture" OnClick="Button2_Click"/>
         </div>

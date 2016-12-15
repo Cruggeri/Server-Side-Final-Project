@@ -6,7 +6,7 @@
 <head runat="server">
     <link href="Content/bootstrap.css" rel="stylesheet"/>
     <script src="Scripts/jquery-3.1.1.js"></script>
-   <%-- <link href="css/bootstrap.css" rel="stylesheet"/>--%>
+   <link href="css/bootstrap.css" rel="stylesheet"/>
     <script src="Scripts/bootstrap.js"></script>
     <link href="content/StyleSheet.css" rel="stylesheet"/>
 
@@ -93,7 +93,9 @@
                 <div id="wrapper">
                     <div id="sidebar-wrapper">
                         <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Vertical">
+                           
                         </asp:Menu>
+                        <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ShowLines="True"></asp:TreeView>
                     </div>
                 </div>
             </nav>

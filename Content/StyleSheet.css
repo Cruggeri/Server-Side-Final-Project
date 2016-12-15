@@ -38,7 +38,7 @@ body
     color:#FFFFCC;
 }
 
-input[type="submit"],input[type=password],input[type=text]
+input[type="submit"],input[type=password],input[type=text],h3 #sellPanel
 {
     color:#CC6600;
     background-color:#663333;
@@ -48,4 +48,20 @@ textarea, input[type=search], datalist
 {    
     color:#CC6600;
     background-color:#333333;
+}
+
+.demoarea {
+    padding: 20px;
+    background: #FFF url(Images/demotop.png) no-repeat left top;
+}
+
+#master_contentplaceholder {
+    line-height: 1.5em;
+}
+#master_content {
+    color: #666666;
+}
+
+body:not([id]) {
+    cursor: auto !important;
 }

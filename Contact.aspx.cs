@@ -34,7 +34,7 @@ public partial class Contact : System.Web.UI.Page
             smtp.Credentials = new System.Net.NetworkCredential("archeotech.app@gmail.com", "ArcheoSnd1");
             smtp.Host = "smtp.gmail.com";
 
-            mail.To.Add(new MailAddress("archeotech.mail@gmail.com"));
+            mail.To.Add(new MailAddress("ArchaeotechContact@gmail.com"));//PW "OldG@dget"
 
             mail.IsBodyHtml = true;
             string st = "test";

@@ -22,7 +22,6 @@
                         <asp:BoundField DataField="gender" HeaderText="gender" SortExpression="gender"/>
                         <asp:BoundField DataField="emailAdd" HeaderText="emailAdd" SortExpression="emailAdd"/>
                         <asp:BoundField DataField="image" HeaderText="image" SortExpression="image"/>
-                        <asp:CommandField ShowEditButton="True" />
                         <asp:TemplateField ShowHeader="False">
                             <ItemTemplate>
                                 <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete"></asp:LinkButton>
@@ -63,7 +62,7 @@
                     <UpdateParameters>
                         <asp:Parameter Name="name" Type="String"/>
                         <asp:Parameter Name="surname" Type="String"/>
-                        <asp:Parameter Name="userName" Type="Int32"/>
+                        <asp:Parameter Name="userName" Type="String"/>
                         <asp:Parameter Name="pwd" Type="String"/>
                         <asp:Parameter Name="gender" Type="String"/>
                         <asp:Parameter Name="emailAdd" Type="String" />
